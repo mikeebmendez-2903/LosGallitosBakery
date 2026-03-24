@@ -1,0 +1,9 @@
+{
+  "name": "bakery-gallitos",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "start:3010": "set PORT=3010&& node server.js"
+  }
+}

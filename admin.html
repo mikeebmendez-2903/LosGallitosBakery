@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel privado | Los Gallitos Bakery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <aside class="admin-sidebar">
+      <div class="admin-brand-block">
+        <p class="admin-kicker">Panel privado</p>
+        <h1>Landing Editor</h1>
+        <p class="admin-lead">Una consola nueva para editar la home moderna sin arrastrar la estructura vieja.</p>
+      </div>
+
+      <section class="admin-overview" aria-label="estado general">
+        <article class="overview-card">
+          <span>Diseno</span>
+          <strong>Landing v2</strong>
+        </article>
+        <article class="overview-card">
+          <span>Fuente</span>
+          <strong>site-content.json</strong>
+        </article>
+        <article class="overview-card">
+          <span>Estado</span>
+          <strong>Editable</strong>
+        </article>
+        <article class="overview-card">
+          <span>Preview</span>
+          <strong>En vivo</strong>
+        </article>
+      </section>
+
+      <nav class="admin-nav" aria-label="Secciones del panel">
+        <button class="admin-tab active" type="button" data-tab-target="general">General</button>
+        <button class="admin-tab" type="button" data-tab-target="hero">Hero</button>
+        <button class="admin-tab" type="button" data-tab-target="menu">Menu</button>
+        <button class="admin-tab" type="button" data-tab-target="nosotros">Nosotros</button>
+        <button class="admin-tab" type="button" data-tab-target="galeria">Galeria</button>
+        <button class="admin-tab" type="button" data-tab-target="contacto">Contacto</button>
+      </nav>
+
+      <div class="admin-sidebar-note">
+        <p>Consejo</p>
+        <strong>Si subes imagenes nuevas, guarda antes de cambiar de pestana.</strong>
+      </div>
+    </aside>
+
+    <section class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <p class="admin-kicker">Editor visual</p>
+          <h2>Consola de contenido</h2>
+        </div>
+        <div class="admin-topbar-actions">
+          <div class="save-indicator is-idle" data-save-indicator>
+            <span class="save-indicator-dot"></span>
+            <span data-save-indicator-label>Sin cambios</span>
+          </div>
+          <a class="preview-link" href="./index.html" target="_blank" rel="noreferrer">Abrir sitio publico</a>
+          <button class="button button-secondary" type="button" data-action="refresh">Actualizar preview</button>
+          <button class="button button-logout" type="button" data-action="logout">Cerrar sesion</button>
+        </div>
+      </header>
+
+      <div class="admin-workspace">
+        <section class="editor-panel">
+          <form class="admin-form">
+            <section class="admin-section active" data-tab-panel="general">
+              <div class="section-copy">
+                <p class="section-eyebrow">Base</p>
+                <h3>General</h3>
+                <p>Edita nombre, subtitulo y favicon del sitio.</p>
+              </div>
+
+              <div class="form-stack">
+                <label>
+                  Nombre del negocio
+                  <input type="text" data-control="brandName">
+                </label>
+                <label>
+                  Texto pequeno del header
+                  <input type="text" data-control="brandMeta">
+                </label>
+              </div>
+
+              <div class="editor-grid editor-grid-two">
+                <article class="media-card media-card-wide">
+                  <div class="media-card-head">
+                    <div>
+                      <p class="media-kicker">Marca</p>
+                      <h4>Logo</h4>
+                    </div>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square">
+                    <img class="media-preview" data-image-preview="logoImage" alt="Vista previa logo">
+                  </div>
+                  <label>
+                    Subir logo
+                    <input type="file" accept="image/*" data-image-upload="logoImage">
+                  </label>
+                </article>
+
+                <article class="media-card media-card-wide">
+                  <div class="media-card-head">
+                    <div>
+                      <p class="media-kicker">Navegacion</p>
+                      <h4>Favicon</h4>
+                    </div>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square">
+                    <img class="media-preview" data-image-preview="faviconImage" alt="Vista previa favicon">
+                  </div>
+                  <label>
+                    Subir favicon
+                    <input type="file" accept="image/*,.ico,.svg" data-image-upload="faviconImage">
+                  </label>
+                </article>
+              </div>
+            </section>
+
+            <section class="admin-section" data-tab-panel="hero">
+              <div class="section-copy">
+                <p class="section-eyebrow">Portada</p>
+                <h3>Hero</h3>
+                <p>Todo el contenido principal de la home.</p>
+              </div>
+
+              <div class="form-stack">
+                <label>Badge<input type="text" data-control="heroBadge"></label>
+                <label>Titulo principal<textarea rows="3" data-control="heroTitle"></textarea></label>
+                <label>Descripcion<textarea rows="4" data-control="heroBody"></textarea></label>
+              </div>
+
+              <div class="editor-grid editor-grid-two">
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Boton 1</p>
+                    <h4>Primario</h4>
+                  </div>
+                  <label>Texto<input type="text" data-control="heroPrimaryText"></label>
+                  <label>Link<input type="text" data-control="heroPrimaryHref"></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Boton 2</p>
+                    <h4>Secundario</h4>
+                  </div>
+                  <label>Texto<input type="text" data-control="heroSecondaryText"></label>
+                  <label>Link<input type="text" data-control="heroSecondaryHref"></label>
+                </article>
+              </div>
+
+              <div class="editor-grid editor-grid-two">
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Imagen</p>
+                    <h4>Principal</h4>
+                  </div>
+                  <div class="media-preview-wrap"><img class="media-preview" data-image-preview="heroImagePrimary" alt="Hero principal"></div>
+                  <label>Subir imagen<input type="file" accept="image/*" data-image-upload="heroImagePrimary"></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Imagen</p>
+                    <h4>Secundaria</h4>
+                  </div>
+                  <div class="media-preview-wrap"><img class="media-preview" data-image-preview="heroImageSecondary" alt="Hero secundaria"></div>
+                  <label>Subir imagen<input type="file" accept="image/*" data-image-upload="heroImageSecondary"></label>
+                </article>
+              </div>
+
+              <div class="editor-grid editor-grid-two">
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Horario</p>
+                    <h4>Tarjeta lateral</h4>
+                  </div>
+                  <label>Etiqueta<input type="text" data-control="hoursLabel"></label>
+                  <label>Titulo<input type="text" data-control="hoursTitle"></label>
+                  <label>Horario<input type="text" data-control="hoursMeta"></label>
+                  <label>Nota<textarea rows="3" data-control="hoursNote"></textarea></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Highlights</p>
+                    <h4>Lista corta</h4>
+                  </div>
+                  <label>
+                    Una linea por highlight
+                    <textarea rows="8" data-list-control="highlights"></textarea>
+                  </label>
+                </article>
+              </div>
+            </section>
+
+            <section class="admin-section" data-tab-panel="menu">
+              <div class="section-copy">
+                <p class="section-eyebrow">Productos</p>
+                <h3>Menu</h3>
+                <p>Edita los textos de la seccion y las tarjetas principales.</p>
+              </div>
+
+              <div class="form-stack">
+                <label>Eyebrow<input type="text" data-control="menuEyebrow"></label>
+                <label>Titulo<textarea rows="3" data-control="menuHeading"></textarea></label>
+                <label>Nota lateral<textarea rows="3" data-control="menuNote"></textarea></label>
+                <label>Titulo caja inferior<input type="text" data-control="menuBoxTitle"></label>
+                <label>Chips del menu<textarea rows="6" data-list-control="menuChips"></textarea></label>
+              </div>
+
+              <div class="editor-grid editor-grid-three">
+                <article class="editor-card" data-card-editor="featuredCards" data-card-index="0">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Tarjeta 1</p>
+                    <h4>Producto</h4>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square"><img class="media-preview" data-card-preview="featuredCards" data-card-index="0" alt="Producto 1"></div>
+                  <label>Titulo<input type="text" data-card-field="featuredCards" data-card-index="0" data-field="title"></label>
+                  <label>Descripcion<textarea rows="3" data-card-field="featuredCards" data-card-index="0" data-field="description"></textarea></label>
+                  <label>Texto link<input type="text" data-card-field="featuredCards" data-card-index="0" data-field="linkText"></label>
+                  <label>Href<input type="text" data-card-field="featuredCards" data-card-index="0" data-field="href"></label>
+                  <label>Imagen<input type="file" accept="image/*" data-card-upload="featuredCards" data-card-index="0"></label>
+                </article>
+                <article class="editor-card" data-card-editor="featuredCards" data-card-index="1">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Tarjeta 2</p>
+                    <h4>Producto</h4>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square"><img class="media-preview" data-card-preview="featuredCards" data-card-index="1" alt="Producto 2"></div>
+                  <label>Titulo<input type="text" data-card-field="featuredCards" data-card-index="1" data-field="title"></label>
+                  <label>Descripcion<textarea rows="3" data-card-field="featuredCards" data-card-index="1" data-field="description"></textarea></label>
+                  <label>Texto link<input type="text" data-card-field="featuredCards" data-card-index="1" data-field="linkText"></label>
+                  <label>Href<input type="text" data-card-field="featuredCards" data-card-index="1" data-field="href"></label>
+                  <label>Imagen<input type="file" accept="image/*" data-card-upload="featuredCards" data-card-index="1"></label>
+                </article>
+                <article class="editor-card" data-card-editor="featuredCards" data-card-index="2">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Tarjeta 3</p>
+                    <h4>Producto</h4>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square"><img class="media-preview" data-card-preview="featuredCards" data-card-index="2" alt="Producto 3"></div>
+                  <label>Titulo<input type="text" data-card-field="featuredCards" data-card-index="2" data-field="title"></label>
+                  <label>Descripcion<textarea rows="3" data-card-field="featuredCards" data-card-index="2" data-field="description"></textarea></label>
+                  <label>Texto link<input type="text" data-card-field="featuredCards" data-card-index="2" data-field="linkText"></label>
+                  <label>Href<input type="text" data-card-field="featuredCards" data-card-index="2" data-field="href"></label>
+                  <label>Imagen<input type="file" accept="image/*" data-card-upload="featuredCards" data-card-index="2"></label>
+                </article>
+              </div>
+
+              <div class="section-copy">
+                <p class="section-eyebrow">Pagina menu</p>
+                <h3>Menu completo</h3>
+                <p>Estas categorias y favoritos alimentan la pestana `menu.html`.</p>
+              </div>
+
+              <div class="editor-grid editor-grid-two">
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Categoria 1</p>
+                    <h4>Bloque menu</h4>
+                  </div>
+                  <label>Titulo<input type="text" data-menu-title="0"></label>
+                  <label>Items<textarea rows="8" data-menu-items="0"></textarea></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Categoria 2</p>
+                    <h4>Bloque menu</h4>
+                  </div>
+                  <label>Titulo<input type="text" data-menu-title="1"></label>
+                  <label>Items<textarea rows="8" data-menu-items="1"></textarea></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Categoria 3</p>
+                    <h4>Bloque menu</h4>
+                  </div>
+                  <label>Titulo<input type="text" data-menu-title="2"></label>
+                  <label>Items<textarea rows="8" data-menu-items="2"></textarea></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Categoria 4</p>
+                    <h4>Bloque menu</h4>
+                  </div>
+                  <label>Titulo<input type="text" data-menu-title="3"></label>
+                  <label>Items<textarea rows="8" data-menu-items="3"></textarea></label>
+                </article>
+              </div>
+
+              <div class="editor-grid editor-grid-three">
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Favorito 1</p>
+                    <h4>Menu</h4>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square"><img class="media-preview" data-card-preview="products" data-card-index="0" alt="Favorito 1"></div>
+                  <label>Titulo<input type="text" data-card-field="products" data-card-index="0" data-field="title"></label>
+                  <label>Descripcion<textarea rows="3" data-card-field="products" data-card-index="0" data-field="description"></textarea></label>
+                  <label>Precio<input type="text" data-card-field="products" data-card-index="0" data-field="price"></label>
+                  <label>Imagen<input type="file" accept="image/*" data-card-upload="products" data-card-index="0"></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Favorito 2</p>
+                    <h4>Menu</h4>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square"><img class="media-preview" data-card-preview="products" data-card-index="1" alt="Favorito 2"></div>
+                  <label>Titulo<input type="text" data-card-field="products" data-card-index="1" data-field="title"></label>
+                  <label>Descripcion<textarea rows="3" data-card-field="products" data-card-index="1" data-field="description"></textarea></label>
+                  <label>Precio<input type="text" data-card-field="products" data-card-index="1" data-field="price"></label>
+                  <label>Imagen<input type="file" accept="image/*" data-card-upload="products" data-card-index="1"></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Favorito 3</p>
+                    <h4>Menu</h4>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square"><img class="media-preview" data-card-preview="products" data-card-index="2" alt="Favorito 3"></div>
+                  <label>Titulo<input type="text" data-card-field="products" data-card-index="2" data-field="title"></label>
+                  <label>Descripcion<textarea rows="3" data-card-field="products" data-card-index="2" data-field="description"></textarea></label>
+                  <label>Precio<input type="text" data-card-field="products" data-card-index="2" data-field="price"></label>
+                  <label>Imagen<input type="file" accept="image/*" data-card-upload="products" data-card-index="2"></label>
+                </article>
+              </div>
+            </section>
+
+            <section class="admin-section" data-tab-panel="nosotros">
+              <div class="section-copy">
+                <p class="section-eyebrow">Marca</p>
+                <h3>Nosotros</h3>
+                <p>Edita el bloque editorial y los puntos cortos.</p>
+              </div>
+
+              <div class="form-stack">
+                <label>Eyebrow<input type="text" data-control="storyEyebrow"></label>
+                <label>Titulo<textarea rows="3" data-control="storyTitle"></textarea></label>
+                <label>Descripcion<textarea rows="5" data-control="storyBody"></textarea></label>
+                <label>Puntos de apoyo<textarea rows="8" data-list-control="storyPoints"></textarea></label>
+              </div>
+            </section>
+
+            <section class="admin-section" data-tab-panel="galeria">
+              <div class="section-copy">
+                <p class="section-eyebrow">Fotos</p>
+                <h3>Galeria</h3>
+                <p>Controla titulo y tres imagenes de la galeria.</p>
+              </div>
+
+              <div class="form-stack">
+                <label>Eyebrow<input type="text" data-control="galleryEyebrow"></label>
+                <label>Titulo<textarea rows="3" data-control="galleryHeading"></textarea></label>
+              </div>
+
+              <div class="editor-grid editor-grid-three">
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Foto 1</p>
+                    <h4>Galeria</h4>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square"><img class="media-preview" data-card-preview="galleryPhotos" data-card-index="0" alt="Galeria 1"></div>
+                  <label>Alt<input type="text" data-card-field="galleryPhotos" data-card-index="0" data-field="alt"></label>
+                  <label>Imagen<input type="file" accept="image/*" data-card-upload="galleryPhotos" data-card-index="0"></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Foto 2</p>
+                    <h4>Galeria</h4>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square"><img class="media-preview" data-card-preview="galleryPhotos" data-card-index="1" alt="Galeria 2"></div>
+                  <label>Alt<input type="text" data-card-field="galleryPhotos" data-card-index="1" data-field="alt"></label>
+                  <label>Imagen<input type="file" accept="image/*" data-card-upload="galleryPhotos" data-card-index="1"></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Foto 3</p>
+                    <h4>Galeria</h4>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square"><img class="media-preview" data-card-preview="galleryPhotos" data-card-index="2" alt="Galeria 3"></div>
+                  <label>Alt<input type="text" data-card-field="galleryPhotos" data-card-index="2" data-field="alt"></label>
+                  <label>Imagen<input type="file" accept="image/*" data-card-upload="galleryPhotos" data-card-index="2"></label>
+                </article>
+              </div>
+            </section>
+
+            <section class="admin-section" data-tab-panel="contacto">
+              <div class="section-copy">
+                <p class="section-eyebrow">Cierre</p>
+                <h3>Contacto</h3>
+                <p>Telefonos, mapa, redes, DoorDash y formulario.</p>
+              </div>
+
+              <div class="form-stack">
+                <label>Eyebrow<input type="text" data-control="contactEyebrow"></label>
+                <label>Titulo<textarea rows="3" data-control="contactTitle"></textarea></label>
+                <label>Descripcion<textarea rows="4" data-control="contactBody"></textarea></label>
+              </div>
+
+              <div class="editor-grid editor-grid-two">
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Datos</p>
+                    <h4>Contacto directo</h4>
+                  </div>
+                  <label>Etiqueta telefono<input type="text" data-control="phoneLabel"></label>
+                  <label>Telefono<input type="text" data-control="phoneText"></label>
+                  <label>WhatsApp<input type="text" data-control="whatsappPhone"></label>
+                  <label>Etiqueta direccion<input type="text" data-control="locationLabel"></label>
+                  <label>Direccion<input type="text" data-control="locationText"></label>
+                  <label>Link del mapa<input type="text" data-control="mapUrl"></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Redes</p>
+                    <h4>Links</h4>
+                  </div>
+                  <label>Titulo redes<input type="text" data-control="socialTitle"></label>
+                  <label>Instagram<input type="text" data-control="instagramUrl"></label>
+                  <label>Facebook<input type="text" data-control="facebookUrl"></label>
+                  <label>TikTok<input type="text" data-control="tiktokUrl"></label>
+                </article>
+              </div>
+
+              <div class="editor-grid editor-grid-two">
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">DoorDash</p>
+                    <h4>Delivery</h4>
+                  </div>
+                  <div class="media-preview-wrap media-preview-square"><img class="media-preview" data-image-preview="deliveryLogo" alt="Logo DoorDash"></div>
+                  <label>Etiqueta<input type="text" data-control="deliveryLabel"></label>
+                  <label>Titulo<input type="text" data-control="deliveryHeading"></label>
+                  <label>Link<input type="text" data-control="deliveryUrl"></label>
+                  <label>Logo<input type="file" accept="image/*" data-image-upload="deliveryLogo"></label>
+                </article>
+                <article class="editor-card">
+                  <div class="editor-card-head">
+                    <p class="media-kicker">Formulario</p>
+                    <h4>Textos</h4>
+                  </div>
+                  <label>Titulo formulario<input type="text" data-control="formTitle"></label>
+                  <label>Placeholder nombre<input type="text" data-control="formNamePlaceholder"></label>
+                  <label>Placeholder contacto<input type="text" data-control="formContactPlaceholder"></label>
+                  <label>Placeholder mensaje<input type="text" data-control="formMessagePlaceholder"></label>
+                  <label>Texto boton<input type="text" data-control="formButtonText"></label>
+                </article>
+              </div>
+            </section>
+          </form>
+
+          <footer class="editor-footer">
+            <div class="editor-actions">
+              <button class="button button-primary" type="button" data-action="save">Guardar cambios</button>
+              <button class="button button-secondary" type="button" data-action="reset">Restaurar</button>
+              <button class="button button-secondary" type="button" data-action="export">Exportar datos</button>
+            </div>
+            <p class="status-text" data-status>Esperando cambios.</p>
+          </footer>
+        </section>
+
+        <aside class="preview-panel">
+          <div class="preview-head">
+            <div>
+              <p class="section-eyebrow">Vista previa</p>
+              <h3>Landing actual</h3>
+            </div>
+            <p class="preview-note">La vista usa la misma informacion que guardas en el panel.</p>
+          </div>
+          <iframe class="preview-frame" src="./index.html" title="Vista previa del sitio"></iframe>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

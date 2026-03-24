@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" role="img" aria-labelledby="title desc">
+  <title id="title">DoorDash</title>
+  <desc id="desc">DoorDash logo fallback</desc>
+  <rect width="240" height="72" rx="18" fill="#ffffff"/>
+  <g fill="#eb1700">
+    <path d="M47 19c10.9 0 19.7 8.8 19.7 19.7S57.9 58.4 47 58.4H22.5c-2.8 0-5-2.2-5-5s2.2-5 5-5H47c5.4 0 9.7-4.3 9.7-9.7S52.4 29 47 29H34.8l10.8-10H47z"/>
+    <path d="M69.7 29h17.9c2.8 0 5 2.2 5 5s-2.2 5-5 5H69.7c-2.8 0-5-2.2-5-5s2.2-5 5-5z"/>
+  </g>
+  <text x="101" y="45" fill="#eb1700" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">DoorDash</text>
+</svg>

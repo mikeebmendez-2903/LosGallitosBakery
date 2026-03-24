@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | Los Gallitos Bakery</title>
+  <meta
+    name="description"
+    content="Panaderia boutique con pan dulce premium, desayunos artesanales y pedidos especiales."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link id="site-favicon" rel="icon" href="./assets/favicon.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css?v=20260324-1">
+</head>
+<body class="landing-v2">
+  <div class="landing-shell">
+    <header class="landing-header">
+      <div class="landing-header-inner">
+        <a class="landing-brand" href="./index.html">
+          <span class="landing-brand-mark">
+            <img class="landing-brand-logo hidden" data-logo-image alt="Logo de Los Gallitos Bakery">
+            <span class="landing-brand-fallback" aria-hidden="true"></span>
+          </span>
+          <span class="landing-brand-copy">
+            <span class="landing-brand-title" data-edit="brandName">Los Gallitos Bakery</span>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+
+        <nav class="site-nav landing-nav" id="site-nav">
+          <a href="#inicio">Inicio</a>
+          <a href="#menu">Menu</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="landing-hero" id="inicio">
+        <div class="landing-hero-glow"></div>
+        <div class="landing-hero-inner">
+          <div class="landing-hero-copy">
+            <h1 data-edit="heroTitle">Pan dulce que entra por los ojos y enamora al primer bocado.</h1>
+            <p data-edit="heroBody">Pan dulce mexicano con imagen cuidada, sabor de casa y presentacion mas fina.</p>
+            <div class="landing-highlights" data-highlights></div>
+          </div>
+
+          <div class="landing-hero-visual">
+            <div class="landing-orb landing-orb-left"></div>
+            <div class="landing-orb landing-orb-right"></div>
+            <div class="landing-hero-grid">
+              <div class="landing-media-card landing-media-card-tall">
+                <img
+                  data-hero-image-primary
+                  src="./assets/heroimageprimary.png"
+                  alt="Pan dulce mexicano"
+                >
+              </div>
+              <div class="landing-stack">
+                <div class="landing-media-card landing-media-card-short">
+                  <img
+                    data-hero-image-secondary
+                    src="./assets/heroimagesecondary.png"
+                    alt="Interior de bakery"
+                  >
+                </div>
+                <div class="landing-hours-card">
+                  <div class="landing-hours-label" data-edit="hoursLabel">Horario</div>
+                  <div class="landing-hours-title" data-edit="hoursTitle">Lunes a Domingo</div>
+                  <div class="landing-hours-meta" data-edit="hoursMeta">6:00 AM - 9:00 PM</div>
+                  <div class="landing-hours-note" data-edit="hoursNote">Perfecto para desayunos, antojos de tarde y pedidos familiares.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-section" id="menu">
+        <div class="landing-section-head">
+          <div>
+            <div class="landing-eyebrow" data-edit="menuEyebrow">Menu destacado</div>
+            <h2 data-edit="menuHeading">Tus productos en una seccion elegante y facil de comprar</h2>
+          </div>
+        </div>
+
+        <div class="landing-feature-grid" data-featured-grid></div>
+
+        <div class="landing-menu-box">
+          <div class="landing-menu-title" data-edit="menuBoxTitle">Mas del menu</div>
+          <div class="landing-menu-grid" data-menu-chips></div>
+        </div>
+      </section>
+
+      <section class="landing-story" id="nosotros">
+        <div class="landing-story-inner">
+          <div>
+            <div class="landing-eyebrow landing-eyebrow-gold" data-edit="storyEyebrow">Nosotros</div>
+            <h2 data-edit="storyTitle">Tradicion mexicana con presentacion premium</h2>
+          </div>
+          <div class="landing-story-grid" data-story-points></div>
+        </div>
+      </section>
+
+      <section class="landing-section" id="galeria">
+        <div class="landing-gallery-head">
+          <h2 data-edit="galleryHeading">Galeria</h2>
+        </div>
+        <div class="landing-gallery-grid" data-gallery-grid></div>
+      </section>
+
+      <section class="landing-contact" id="contacto">
+        <div class="landing-contact-grid">
+          <div class="landing-contact-primary">
+            <h2 data-edit="contactTitle">Listos para tomar tu pedido</h2>
+            <div class="landing-contact-cards">
+              <div class="landing-contact-card">
+                <div class="landing-contact-card-label" data-edit="phoneLabel">Telefono</div>
+                <div class="landing-contact-card-value">
+                  <a data-phone-link href="#" data-edit="phoneText">(440) 000-0000</a>
+                </div>
+              </div>
+              <div class="landing-contact-card">
+                <div class="landing-contact-card-label" data-edit="locationLabel">Direccion</div>
+                <div class="landing-contact-card-value">
+                  <a data-map-link href="#" target="_blank" rel="noreferrer noopener" data-edit="locationText">7614 - Tu ubicacion</a>
+                </div>
+              </div>
+            </div>
+            <div class="landing-contact-social-row">
+              <div class="landing-social-group">
+                <div class="landing-social-title" data-edit="socialTitle">Siguenos</div>
+                <div class="social-links" data-social-links></div>
+              </div>
+              <a class="landing-delivery-link is-disabled" data-doordash-link href="#" target="_blank" rel="noreferrer noopener" aria-disabled="true">
+                <span class="doordash-logo-wrap">
+                  <img class="doordash-logo hidden" data-doordash-logo alt="Logo de DoorDash">
+                  <span class="doordash-logo-fallback">DD</span>
+                </span>
+                <span class="landing-delivery-copy">
+                  <span class="landing-delivery-kicker" data-edit="deliveryLabel">Delivery</span>
+                  <span class="landing-delivery-text" data-edit="deliveryHeading">Ordena con DoorDash</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="landing-contact-form">
+            <div class="landing-contact-form-title" data-edit="formTitle">Envianos un mensaje</div>
+            <div class="landing-form-grid">
+              <input type="text" data-placeholder="formNamePlaceholder" placeholder="Nombre">
+              <input type="text" data-placeholder="formContactPlaceholder" placeholder="Telefono o email">
+              <textarea data-placeholder="formMessagePlaceholder" placeholder="Que te gustaria ordenar?"></textarea>
+              <button type="button" data-edit="formButtonText">Enviar mensaje</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <a
+    class="whatsapp-float is-disabled"
+    data-whatsapp-link
+    href="#"
+    target="_blank"
+    rel="noreferrer noopener"
+    aria-label="Enviar mensaje por WhatsApp"
+    aria-disabled="true"
+  >
+    <span class="whatsapp-float-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" role="img" focusable="false">
+        <path fill="currentColor" d="M19.05 4.94A9.77 9.77 0 0 0 12.09 2C6.71 2 2.33 6.37 2.33 11.75c0 1.72.45 3.39 1.31 4.86L2.25 22l5.53-1.45a9.7 9.7 0 0 0 4.3 1.03h.01c5.38 0 9.76-4.38 9.76-9.76 0-2.61-1.02-5.06-2.8-6.88Zm-6.96 14.99h-.01a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.28.86.88-3.2-.2-.33a8.1 8.1 0 0 1-1.24-4.21c0-4.48 3.65-8.13 8.14-8.13 2.17 0 4.21.84 5.74 2.38a8.07 8.07 0 0 1 2.37 5.76c0 4.49-3.65 8.18-8.13 8.18Zm4.46-6.1c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.79-.2-.48-.4-.42-.54-.43h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.24 1.02.39 1.37.5.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.13.2-.55.2-1.02.14-1.13-.06-.11-.22-.18-.46-.3Z"/>
+      </svg>
+    </span>
+    <span class="whatsapp-float-label">WhatsApp</span>
+  </a>
+
+  <script src="script.js?v=20260324-1"></script>
+</body>
+</html>

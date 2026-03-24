@@ -1,0 +1,204 @@
+{
+  "brandName": "Los Gallitos Bakery",
+  "brandMeta": "Pan dulce mexicano - Cafe - Champurrado",
+  "logoImage": "./assets/logo.png",
+  "faviconImage": "./assets/favicon.jpg",
+  "heroBadge": "",
+  "heroTitle": "Pan dulce que entra por los ojos y enamora al primer bocado.",
+  "heroBody": "Pan dulce mexicano con imagen cuidada, sabor de casa y presentacion mas fina.",
+  "heroPrimaryText": "Ordenar ahora",
+  "heroPrimaryHref": "#contacto",
+  "heroSecondaryText": "Ver menu",
+  "heroSecondaryHref": "#menu",
+  "heroImagePrimary": "./assets/heroimageprimary.png",
+  "heroImageSecondary": "./assets/heroimagesecondary.png",
+  "hoursLabel": "Horario",
+  "hoursTitle": "Lunes a Domingo",
+  "hoursMeta": "6:00 AM - 9:00 PM",
+  "hoursNote": "Fresco cada dia.",
+  "menuEyebrow": "Menu destacado",
+  "menuHeading": "Variedad de Pan!",
+  "menuNote": "",
+  "menuBoxTitle": "Mas del menu",
+  "storyEyebrow": "Nosotros",
+  "storyTitle": "Tradicion mexicana con presentacion premium",
+  "storyBody": "",
+  "galleryEyebrow": "",
+  "galleryHeading": "Galeria",
+  "contactEyebrow": "",
+  "contactTitle": "Listos para tomar tu pedido",
+  "contactBody": "",
+  "phoneLabel": "Telefono",
+  "phoneText": "(443) 557-0406",
+  "locationLabel": "Direccion",
+  "locationText": "7614 Baltimore Annapolis Blvd, Glen Burnie, MD 21060",
+  "mapUrl": "",
+  "socialTitle": "Siguenos",
+  "instagramUrl": "",
+  "facebookUrl": "",
+  "tiktokUrl": "",
+  "deliveryLabel": "Delivery",
+  "deliveryHeading": "Ordena con DoorDash",
+  "deliveryUrl": "",
+  "deliveryLogo": "./assets/doordash-logo.svg",
+  "formTitle": "Envianos un mensaje",
+  "formButtonText": "Enviar mensaje",
+  "formNamePlaceholder": "Nombre",
+  "formContactPlaceholder": "Telefono o email",
+  "formMessagePlaceholder": "Escribenos!",
+  "highlights": [
+    "Pan dulce fresco cada manana",
+    "Recetas tradicionales",
+    "Encargos y pedidos faciles"
+  ],
+  "storyPoints": [
+    "Horneado fresco",
+    "Imagen cuidada",
+    "Sabor tradicional",
+    "Atencion directa"
+  ],
+  "menuChips": [
+    "Conchas",
+    "Cuernitos",
+    "Orejitas",
+    "Pan relleno",
+    "Champurrado",
+    "Cafe"
+  ],
+  "featuredCards": [
+    {
+      "title": "",
+      "description": "Suave y recien horneada.",
+      "image": "./assets/featuredcards-0-image.png",
+      "linkText": "Ver producto",
+      "href": "#contacto"
+    },
+    {
+      "title": "",
+      "description": "Crujientes y ligeras.",
+      "image": "./assets/featuredcards-1-image.png",
+      "linkText": "Ver producto",
+      "href": "#contacto"
+    },
+    {
+      "title": "",
+      "description": "Deliciosos.",
+      "image": "./assets/featuredcards-2-image.png",
+      "linkText": "Ver producto",
+      "href": "#contacto"
+    }
+  ],
+  "galleryPhotos": [
+    {
+      "src": "./assets/galleryphotos-0-src.png",
+      "alt": "Foto de pan dulce 1"
+    },
+    {
+      "src": "./assets/galleryphotos-1-src.png",
+      "alt": "Foto de pan dulce 2"
+    },
+    {
+      "src": "./assets/galleryphotos-2-src.png",
+      "alt": "Foto de pan dulce 3"
+    }
+  ],
+  "menuSections": [
+    {
+      "title": "Pan dulce",
+      "items": [
+        {
+          "name": "Concha Mexicana",
+          "price": "$1.25"
+        },
+        {
+          "name": "Yoyo",
+          "price": "$2.00"
+        },
+        {
+          "name": "Mil Hojas",
+          "price": "$5.99"
+        }
+      ]
+    },
+    {
+      "title": "Antojitos",
+      "items": [
+        {
+          "name": "Torta de Atun",
+          "price": "$8.00"
+        },
+        {
+          "name": "Torta de Chavo",
+          "price": "$8.00"
+        },
+        {
+          "name": "Chuchitos",
+          "price": "$3.50"
+        }
+      ]
+    },
+    {
+      "title": "Bebidas",
+      "items": [
+        {
+          "name": "Champurrado",
+          "price": "$3.50"
+        },
+        {
+          "name": "Cafe",
+          "price": "$2.00"
+        },
+        {
+          "name": "Jarritos",
+          "price": "$3.00"
+        }
+      ]
+    },
+    {
+      "title": "Favoritos",
+      "items": [
+        {
+          "name": "Cuernitos",
+          "price": "$1.25"
+        },
+        {
+          "name": "Orejitas",
+          "price": "$1.25"
+        },
+        {
+          "name": "Pan Rojo",
+          "price": "$1.25"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "title": "Concha Tricolor",
+      "description": "Nuestra pieza mas reconocible.",
+      "price": "$1.25",
+      "image": "./assets/products-0-image.png"
+    },
+    {
+      "title": "Mil Hojas",
+      "description": "Un favorito de vitrina.",
+      "price": "$5.99",
+      "image": "./assets/products-1-image.png"
+    },
+    {
+      "title": "Champurrado + pan dulce",
+      "description": "Perfecto para desayuno o tarde.",
+      "price": "Desde $3.50",
+      "image": "./assets/products-2-image.png"
+    }
+  ],
+  "footerText": "Los Gallitos Bakery",
+  "scheduleText": "Lunes a Domingo: 6:00 AM - 9:00 PM",
+  "contactHeading": "",
+  "contactNote": "",
+  "socialHeading": "",
+  "deliveryText": "",
+  "deliveryButtonText": "Abrir DoorDash",
+  "locationLabelMenu": "Ubicacion",
+  "scheduleLabel": "Horario"
+}
