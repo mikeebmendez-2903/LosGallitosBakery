@@ -2,11 +2,13 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const { spawn } = require("child_process");
 const { URL } = require("url");
 
 const PORT = process.env.PORT || 3000;
 const ROOT = __dirname;
 const CONTENT_PATH = path.join(ROOT, "site-content.json");
+const PUBLISH_SCRIPT_PATH = path.join(ROOT, "publish-to-github.bat");
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "Admin%2903";
 const sessions = new Map();
 const PRIVATE_STATIC_PATHS = new Set([
@@ -14,7 +16,8 @@ const PRIVATE_STATIC_PATHS = new Set([
   "/server.js",
   "/package.json",
   "/.gitignore",
-  "/start-admin-panel.bat"
+  "/start-admin-panel.bat",
+  "/publish-to-github.bat"
 ]);
 
 const MIME_TYPES = {
@@ -102,6 +105,15 @@ function isAuthenticated(request) {
 function redirect(response, location) {
   response.writeHead(302, { Location: location });
   response.end();
+}
+
+function openPublishScript() {
+  spawn("cmd.exe", ["/c", "start", "", PUBLISH_SCRIPT_PATH], {
+    cwd: ROOT,
+    detached: true,
+    stdio: "ignore",
+    windowsHide: false
+  }).unref();
 }
 
 const server = http.createServer(async (request, response) => {
@@ -194,6 +206,21 @@ const server = http.createServer(async (request, response) => {
     }
 
     sendJson(response, 405, { error: "Metodo no permitido." });
+    return;
+  }
+
+  if (requestUrl.pathname === "/api/open-publish" && request.method === "POST") {
+    if (!isAuthenticated(request)) {
+      sendJson(response, 401, { error: "Sesion no autorizada." });
+      return;
+    }
+
+    try {
+      openPublishScript();
+      sendJson(response, 200, { ok: true });
+    } catch (error) {
+      sendJson(response, 500, { error: "No se pudo abrir el publicador." });
+    }
     return;
   }
 

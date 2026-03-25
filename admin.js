@@ -353,6 +353,14 @@ async function logout() {
   await fetch("/api/logout", { method: "POST" });
 }
 
+async function openPublishScript() {
+  const response = await fetch("/api/open-publish", { method: "POST" });
+
+  if (!response.ok) {
+    throw new Error("open_publish_failed");
+  }
+}
+
 async function loadContent() {
   const response = await fetch("/api/content", { cache: "no-store" });
   if (!response.ok) {
@@ -479,6 +487,12 @@ if (saveButton) {
       await saveContent(currentContentState);
       markClean();
       refreshPreview();
+      try {
+        await openPublishScript();
+        setStatus("Cambios guardados. Se abrio el publicador de GitHub.", "success");
+      } catch (error) {
+        setStatus("Cambios guardados. Abre publish-to-github.bat para subirlos.", "success");
+      }
     } catch (error) {
       setStatus("No se pudieron guardar los cambios.", "error");
     } finally {
