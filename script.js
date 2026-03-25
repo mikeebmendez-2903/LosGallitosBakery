@@ -581,13 +581,24 @@ function initMenuToggle() {
 
 async function loadContent() {
   try {
-    const response = await fetch("/api/content", { cache: "no-store" });
+    const apiResponse = await fetch("/api/content", { cache: "no-store" });
 
-    if (!response.ok) {
+    if (apiResponse.ok) {
+      const payload = await apiResponse.json();
+      return normalizeContent(payload);
+    }
+  } catch (error) {
+    // Fall through to static JSON for GitHub Pages or other static hosting.
+  }
+
+  try {
+    const staticResponse = await fetch("./site-content.json", { cache: "no-store" });
+
+    if (!staticResponse.ok) {
       throw new Error("content_failed");
     }
 
-    const payload = await response.json();
+    const payload = await staticResponse.json();
     return normalizeContent(payload);
   } catch (error) {
     return normalizeContent();
