@@ -134,7 +134,8 @@ a {
 .preview-note,
 .status-text,
 .login-note,
-.admin-sidebar-note p {
+.admin-sidebar-note p,
+.admin-side-helper {
   color: var(--muted);
 }
 
@@ -331,6 +332,19 @@ a {
   margin-top: 7px;
   line-height: 1.55;
   color: #f3e2be;
+}
+
+.admin-side-helper {
+  display: block;
+  margin-top: 10px;
+  line-height: 1.55;
+  font-size: 0.88rem;
+}
+
+.admin-side-helper code {
+  color: #dff3ff;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-weight: 800;
 }
 
 .admin-main {
